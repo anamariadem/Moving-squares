@@ -1,3 +1,4 @@
+let toggle = false;
 
 let blackSquare = document.getElementById("black");
 
@@ -13,12 +14,21 @@ greenSquare.addEventListener('click', () => {
     setTimeout(() => {
         greenSquare.style.animation = 'move-green 10s linear';
     }, 200);
-
 });
 
 let redSquare = document.getElementById("red");
 redSquare.addEventListener('click', () =>{
     setTimeout(() => {
-        redSquare.style.animation = 'move-red 10s linear';
+        toggle = !toggle;
+        if(!toggle){
+            console.log()
+            redSquare.classList.remove('move-red-first');
+            redSquare.classList.add('move-red-second');
+        }else {
+            redSquare.classList.remove('move-red-second');
+            redSquare.classList.add('move-red-first');
+            // redSquare.style.animation = 'move-red 10s linear';
+            // redSquare.style.animationFillMode = 'forwards';
+        }
     }, 200);
 })
