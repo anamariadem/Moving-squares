@@ -7,7 +7,10 @@ window.onload = () => {
         // setTimeout( () => {
             blackSquare.style.animation = 'move-black 10s linear';
         // }, 200);
-
+        blackSquare.classList.add('avoid-clicks')
+        setTimeout(() => {
+            blackSquare.classList.remove('avoid-clicks')
+        }, 10000)
     });
 
     let greenSquare = document.getElementById("green");
@@ -15,6 +18,10 @@ window.onload = () => {
         // setTimeout(() => {
             greenSquare.style.animation = 'move-green 10s linear';
         // }, 200);
+        greenSquare.classList.add('avoid-clicks')
+        setTimeout(() => {
+            greenSquare.classList.remove('avoid-clicks')
+        }, 10000)
     });
 
     let redSquare = document.getElementById("red");
