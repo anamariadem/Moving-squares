@@ -28,9 +28,11 @@ window.onload = () => {
             }else {
                 redSquare.classList.remove('move-red-second');
                 redSquare.classList.add('move-red-first');
-                // redSquare.style.animation = 'move-red 10s linear';
-                // redSquare.style.animationFillMode = 'forwards';
             }
+            redSquare.classList.add('avoid-clicks')
+            setTimeout(() => {
+                redSquare.classList.remove('avoid-clicks')
+            }, 10000)
         // }, 200);
     })
 }

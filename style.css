@@ -34,6 +34,10 @@
     z-index: 5;
 }
 
+.avoid-clicks{
+    pointer-events: none;
+}
+
 .move-red-first{
     animation: move-red-first 10s linear;
     animation-fill-mode: forwards;
